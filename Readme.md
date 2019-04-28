@@ -145,7 +145,7 @@ If you already have OpenBLAS in the directory, simply run "git submodule update"
 
 # FAQ 
 
-##1. (*Deprecated*) Compiling errors like
+## 1. (*Deprecated*) Compiling errors like
 ~~~~~~~~~~~~~~~~
 LefScanner.cc:5582:21: error: out-of-line definition of 'LexerInput' does not match any declaration in 'LefParserFlexLexer'
                         size_t yyFlexLexer::LexerInput( char* buf, size_t max_size )
@@ -155,7 +155,7 @@ come from old versions of flex, such as 2.5.35.
 
 **A:** It can be solved by installing correct flex version 2.5.37 and add the directory to correct flex to PATH environment variable. 
 
-##2. (*Deprecated*) Compiling errors like 
+## 2. (*Deprecated*) Compiling errors like 
 ~~~~~~~~~~~~~~~~
 LefScanner.cc:3195:8: error: member reference type 'std::istream *' (aka 'basic_istream<char> *') is a pointer; did you mean to use '->'?
                         yyin.rdbuf(std::cin.rdbuf());
@@ -165,7 +165,7 @@ come from new versions of flex, such as 2.6.0.
 
 **A:** It can be solved by installing correct flex version 2.5.37 and add the directory to correct flex to PATH environment variable. 
 
-##3. Compiling errors related to LefScanner.cc usually come from the configurations of flex version and environment variables FLEX_DIR and LEX_INCLUDE_DIR. 
+## 3. Compiling errors related to LefScanner.cc usually come from the configurations of flex version and environment variables FLEX_DIR and LEX_INCLUDE_DIR. 
 
 **A:** LefScanner.cc needs to include the correct FlexLexer.h from the flex package for compilation; i.e., the version of FlexLexer.h must match the version of the flex executable. 
 Most errors for LefScanner.cc are caused by the failure of finding the correct FlexLexer.h (be careful when you have multiple versions of flex installed). 
@@ -173,7 +173,7 @@ To solve the problem, users can set the environment variable FLEX_DIR such that 
 The decision can be made according to how the flex package is installed.  
 
 
-##4. Crappy linkage error under gcc 5.1 or later, even though libxxx.a is correctly linked, like 
+## 4. Crappy linkage error under gcc 5.1 or later, even though libxxx.a is correctly linked, like 
 ~~~~~~~~~~~~~~~~
 undefined reference to `GdsParser::read(GdsParser::GdsDataBaseKernel&, std::string const&)'
 ~~~~~~~~~~~~~~~~
@@ -185,7 +185,8 @@ Therefore, it is necessary to make sure the same STL ABI is used for compiling L
 In other words, set consistent _GLIBCXX_USE_CXX11_ABI values. 
 A safe way is to leave it to the default value. 
 
-# Copyright 
+# Copyright
+
 The software is released under MIT license except third party packages. Please see the LICENSE file for details. 
 
 Third party package **c-thread-pool** is released under MIT license. 
